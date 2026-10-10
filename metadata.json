@@ -1,0 +1,6 @@
+{
+  "name": "GVR Gomes Veículos - Seminovos Premium",
+  "description": "Sistema e portal exclusivo de venda de carros usados e seminovos selecionados da GVR Gomes Veículos, com simulação de financiamento e painel administrativo completo.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
