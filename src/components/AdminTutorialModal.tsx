@@ -142,13 +142,26 @@ export const AdminTutorialModal: React.FC<AdminTutorialModalProps> = ({
   };
 
   return (
-    <div className="fixed inset-0 z-50 overflow-y-auto bg-black/90 backdrop-blur-xl flex justify-center items-center p-3 sm:p-6 animate-fadeIn">
+    <div
+      onClick={onClose}
+      className="fixed inset-0 z-50 overflow-y-auto bg-black/90 backdrop-blur-xl flex justify-center items-center p-3 sm:p-6 animate-fadeIn cursor-pointer"
+    >
       {/* Giant Modal Container */}
-      <div className="relative w-full max-w-4xl bg-slate-900 border border-slate-700/80 rounded-3xl shadow-2xl overflow-hidden max-h-[94vh] flex flex-col my-auto">
+      <div
+        onClick={(e) => e.stopPropagation()}
+        className="relative w-full max-w-4xl bg-slate-900 border border-slate-700/80 rounded-3xl shadow-2xl overflow-hidden max-h-[94vh] flex flex-col my-auto cursor-default"
+      >
         {/* Top Branding Banner */}
         <div className="flex items-center justify-between px-5 sm:px-8 py-4 bg-slate-950 border-b border-slate-800">
           <div className="flex items-center gap-3">
-            <div className="scale-75 origin-left shrink-0">
+            <button
+              onClick={onClose}
+              className="px-3 py-1.5 bg-slate-800 hover:bg-slate-700 text-slate-200 text-xs font-semibold rounded-xl transition-colors cursor-pointer flex items-center gap-1.5 border border-slate-700"
+            >
+              <ArrowLeft className="w-3.5 h-3.5" />
+              <span>Voltar ao Site</span>
+            </button>
+            <div className="scale-75 origin-left shrink-0 hidden sm:block">
               <GvrLogo variant="compact" size="sm" showPhone={false} />
             </div>
             <div>

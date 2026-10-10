@@ -45,8 +45,6 @@ export default function App() {
     setVehicles(loadedVehicles);
     setSettings(loadedSettings);
     setLeads(loadedLeads);
-    // Guia sempre abre diretamente na entrada conforme solicitado
-    setIsTutorialOpen(true);
   }, []);
 
   // Update handlers with persistence
